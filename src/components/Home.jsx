@@ -1,14 +1,11 @@
 import TeamLogo from "./TeamLogo";
 import { Link } from "react-router-dom";
 import useTeamNames from "../hooks/useTeamNames";
-import useTeamNames from "../hooks/useTeamNames";
 
 export default function Home() {
-  const { loading, response: useTeamNames } = useTeamNames;
+  const { loading, response: teamNames } = useTeamNames();
 
-  if (loading) {
-    return null;
-  }
+  if (loading) return null;
 
   return (
     <div className="container">

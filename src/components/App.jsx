@@ -1,15 +1,8 @@
-import * as React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useParams,
-} from "react-router-dom";
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Teams from "./Teams";
-import Players from "./Player";
+import Players from "./Players";
 import TeamPage from "./TeamPage";
 
 export default function App() {
@@ -17,6 +10,7 @@ export default function App() {
     <Router>
       <div>
         <Navbar />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/players" element={<Players />} />
